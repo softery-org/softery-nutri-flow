@@ -2,24 +2,27 @@
 import { 
   Users, 
   LineChart, 
-  Calendar 
+  Calendar,
+  TrendingUp,
+  ArrowUp,
+  Clock
 } from "lucide-react";
 
 const metrics = [
   {
     icon: <Users className="h-8 w-8 text-white" />,
-    title: "Clientes com recorrência",
-    description: "Aumento de pacientes que retornam para consultas de acompanhamento e ajustes de plano alimentar."
+    title: "Clientes recorrentes",
+    description: "Aumento de pacientes que retornam para consultas e ajustes."
   },
   {
     icon: <LineChart className="h-8 w-8 text-white" />,
     title: "CAC/LTV",
-    description: "Melhore a relação entre custo de aquisição e valor vitalício do cliente com retenção aprimorada."
+    description: "Melhor relação entre custo de aquisição e valor do cliente."
   },
   {
     icon: <Calendar className="h-8 w-8 text-white" />,
-    title: "Crescimento de atendimentos",
-    description: "Amplie sua capacidade de atendimento com processos mais eficientes e organizados."
+    title: "Mais atendimentos",
+    description: "Amplie sua capacidade com processos eficientes."
   }
 ];
 
@@ -32,7 +35,7 @@ const Metrics = () => {
             Métricas que <span className="text-softery-200">importam</span>
           </h2>
           <p className="text-softery-100 text-lg">
-            Acompanhe os indicadores certos para avaliar o crescimento real da sua clínica de nutrição
+            Indicadores essenciais para o crescimento da sua clínica
           </p>
         </div>
 
@@ -48,23 +51,43 @@ const Metrics = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+        <div className="mt-16 bg-white/10 backdrop-blur-sm p-8 rounded-xl">
           <div className="grid md:grid-cols-3 gap-8 items-center">
-            <div className="md:col-span-1">
-              <div className="text-3xl font-bold mb-2">+60%</div>
-              <div className="text-softery-100">Aumento na taxa de retenção de pacientes</div>
+            <div className="md:col-span-1 flex gap-3 items-center">
+              <div className="text-softery-200">
+                <TrendingUp size={36} />
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-1">+60%</div>
+                <div className="text-softery-100">Aumento na retenção de pacientes</div>
+              </div>
             </div>
-            <div className="md:col-span-1">
-              <div className="text-3xl font-bold mb-2">-40%</div>
-              <div className="text-softery-100">Redução em tarefas administrativas</div>
+            <div className="md:col-span-1 flex gap-3 items-center">
+              <div className="text-softery-200">
+                <ArrowUp size={36} />
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-1">-40%</div>
+                <div className="text-softery-100">Redução em tarefas administrativas</div>
+              </div>
             </div>
-            <div className="md:col-span-1">
-              <div className="text-3xl font-bold mb-2">+25%</div>
-              <div className="text-softery-100">Crescimento em faturamento médio</div>
+            <div className="md:col-span-1 flex gap-3 items-center">
+              <div className="text-softery-200">
+                <Clock size={36} />
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-1">+25%</div>
+                <div className="text-softery-100">Crescimento em faturamento</div>
+              </div>
             </div>
           </div>
-          <div className="mt-6 text-center text-sm text-softery-200">
-            * Baseado em dados agregados dos nossos clientes nos últimos 12 meses
+          
+          <div className="mt-8 flex justify-center">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+              alt="Dashboard de nutrição" 
+              className="rounded-lg max-h-64 object-cover opacity-80" 
+            />
           </div>
         </div>
       </div>
