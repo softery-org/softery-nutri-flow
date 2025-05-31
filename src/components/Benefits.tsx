@@ -7,7 +7,9 @@ import {
   BarChart,
   FileText,
   Users,
-  Settings
+  Settings,
+  Calendar,
+  MessageSquare
 } from "lucide-react";
 
 const benefits = [
@@ -54,7 +56,7 @@ const Benefits = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="flex justify-center">
             <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+              src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
               alt="Nutricionista trabalhando" 
               className="rounded-lg shadow-xl max-h-96 object-cover"
             />
@@ -77,34 +79,42 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className="mt-16 bg-softery-50 border border-softery-200 p-6 rounded-xl">
-          <div className="max-w-3xl mx-auto">
+        <div className="mt-16 bg-gradient-to-r from-softery-50 to-softery-100 p-8 rounded-2xl border border-softery-200">
+          <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-center text-softery-800">
               Feito para você, nutricionista
             </h3>
-            <p className="text-lg text-center mb-6">
+            <p className="text-lg text-center mb-8 text-softery-700">
               Ecossistema pensado para sua rotina diária
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div className="p-4 bg-white rounded-lg shadow-sm border border-softery-100">
-                <Clock className="h-6 w-6 text-softery-600 mx-auto mb-2" />
-                <div className="text-softery-600 font-semibold mb-1">Lembretes</div>
-                <div className="text-sm text-gray-500">automáticos</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-softery-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Clock className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-softery-800 font-semibold mb-1">Lembretes</div>
+                <div className="text-sm text-softery-600">automáticos</div>
               </div>
-              <div className="p-4 bg-white rounded-lg shadow-sm border border-softery-100">
-                <FileText className="h-6 w-6 text-softery-600 mx-auto mb-2" />
-                <div className="text-softery-600 font-semibold mb-1">Formulários</div>
-                <div className="text-sm text-gray-500">pré-consulta</div>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <FileText className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-softery-800 font-semibold mb-1">Formulários</div>
+                <div className="text-sm text-softery-600">pré-consulta</div>
               </div>
-              <div className="p-4 bg-white rounded-lg shadow-sm border border-softery-100">
-                <Users className="h-6 w-6 text-softery-600 mx-auto mb-2" />
-                <div className="text-softery-600 font-semibold mb-1">Acompanhamento</div>
-                <div className="text-sm text-gray-500">recorrente</div>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-softery-800 font-semibold mb-1">Acompanhamento</div>
+                <div className="text-sm text-softery-600">recorrente</div>
               </div>
-              <div className="p-4 bg-white rounded-lg shadow-sm border border-softery-100">
-                <Settings className="h-6 w-6 text-softery-600 mx-auto mb-2" />
-                <div className="text-softery-600 font-semibold mb-1">Gestão</div>
-                <div className="text-sm text-gray-500">centralizada</div>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Settings className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-softery-800 font-semibold mb-1">Gestão</div>
+                <div className="text-sm text-softery-600">centralizada</div>
               </div>
             </div>
           </div>

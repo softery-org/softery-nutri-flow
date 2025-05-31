@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Sparkles } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center bg-softery-100 text-softery-700 px-3 py-1 rounded-full text-sm font-medium">
-              <Sparkles size={16} className="mr-1" /> Especialistas em nutrição
+              🥗 Especialistas em nutrição
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
               <span className="block">Tecnologia que</span>
@@ -34,14 +34,14 @@ const Hero = () => {
             <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-tech-400/20 rounded-full blur-3xl"></div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="IA e Nutrição Digital" 
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                alt="Alimentos saudáveis e nutritivos" 
                 className="rounded-lg shadow-xl mb-4"
               />
               <div className="bg-white p-6 rounded-xl shadow-lg border absolute -bottom-10 -right-10">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="bg-softery-100 text-softery-600 h-10 w-10 flex items-center justify-center rounded-full">
-                    <Sparkles size={18} />
+                    🥗
                   </div>
                   <div>
                     <div className="font-medium">Tecnologia IA</div>
