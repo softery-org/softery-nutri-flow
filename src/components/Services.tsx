@@ -4,34 +4,50 @@ import {
   Calendar, 
   MessageSquare, 
   BarChart3, 
-  Globe 
+  Globe,
+  Brain,
+  Users,
+  Zap
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     icon: <Activity className="h-10 w-10 text-softery-600" />,
     title: "Diagnóstico digital",
-    description: "Avaliação dos processos para identificar oportunidades de melhoria.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    description: "Avaliação dos processos para identificar oportunidades.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+  },
+  {
+    icon: <Brain className="h-10 w-10 text-softery-600" />,
+    title: "IA para Nutrição",
+    description: "Soluções inteligentes para análise nutricional.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
     icon: <Calendar className="h-10 w-10 text-softery-600" />,
-    title: "Soluções integradas",
-    description: "CRM, calendário, relatórios e chatbot para suas necessidades.",
-    image: "https://images.unsplash.com/photo-1484863137850-59afcfe05386?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    title: "Gestão integrada",
+    description: "CRM, calendário e relatórios em uma plataforma.",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
-    icon: <Globe className="h-10 w-10 text-softery-600" />,
-    title: "Presença digital",
-    description: "Integração com Google Meu Negócio e estratégias online.",
-    image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    icon: <Users className="h-10 w-10 text-softery-600" />,
+    title: "Gestão de pacientes",
+    description: "Automação do acompanhamento nutricional.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
     icon: <MessageSquare className="h-10 w-10 text-softery-600" />,
-    title: "Suporte contínuo",
-    description: "Acompanhamento para aproveitar ao máximo as soluções.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    title: "Chatbot inteligente",
+    description: "Atendimento automático para consultas.",
+    image: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+  },
+  {
+    icon: <Zap className="h-10 w-10 text-softery-600" />,
+    title: "Automação de processos",
+    description: "Workflows inteligentes para sua clínica.",
+    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
 ];
 
@@ -43,44 +59,48 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             O que <span className="text-softery-600">entregamos</span>
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-lg mb-6">
             Soluções para otimizar sua clínica de nutrição e focar no que importa.
           </p>
+          <Button className="bg-softery-600 hover:bg-softery-700">
+            Ver todas as soluções
+          </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Card key={index} className="border-border hover:shadow-md transition-shadow overflow-hidden">
-              <div className="h-40 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                />
-              </div>
-              <CardHeader className="pb-2">
-                <div className="mb-4">{service.icon}</div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-base">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="mt-12 p-6 bg-gradient-to-br from-tech-600 to-tech-800 rounded-lg text-white text-center">
-          <div className="max-w-3xl mx-auto flex items-center justify-center gap-6">
-            <div className="text-5xl font-bold">15h</div>
-            <div className="text-left">
-              <h3 className="text-2xl font-bold mb-1">Economia semanal</h3>
-              <p className="text-tech-100">
-                Nutricionistas com soluções digitais economizam até 15 horas por semana.
-              </p>
-            </div>
+        <div className="overflow-x-auto pb-6">
+          <div className="flex gap-6 min-w-max">
+            {services.map((service, index) => (
+              <Card key={index} className="flex-shrink-0 w-80 border-border hover:shadow-md transition-shadow overflow-hidden">
+                <div className="h-40 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  />
+                </div>
+                <CardHeader className="pb-2">
+                  <div className="mb-4">{service.icon}</div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 text-base">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" className="w-full text-softery-600 border-softery-600">
+                    Saiba mais
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button className="bg-tech-600 hover:bg-tech-700 text-white px-8 py-3">
+            Agendar demonstração gratuita
+          </Button>
         </div>
       </div>
     </section>

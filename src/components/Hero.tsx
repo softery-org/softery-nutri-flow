@@ -34,8 +34,8 @@ const Hero = () => {
             <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-tech-400/20 rounded-full blur-3xl"></div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Nutricionista com paciente" 
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                alt="IA e Nutrição Digital" 
                 className="rounded-lg shadow-xl mb-4"
               />
               <div className="bg-white p-6 rounded-xl shadow-lg border absolute -bottom-10 -right-10">
@@ -44,8 +44,8 @@ const Hero = () => {
                     <Sparkles size={18} />
                   </div>
                   <div>
-                    <div className="font-medium">+60% de eficiência</div>
-                    <div className="text-sm text-gray-500">em tarefas diárias</div>
+                    <div className="font-medium">Tecnologia IA</div>
+                    <div className="text-sm text-gray-500">para nutricionistas</div>
                   </div>
                 </div>
               </div>
