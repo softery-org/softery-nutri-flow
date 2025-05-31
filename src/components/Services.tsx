@@ -17,25 +17,25 @@ const services = [
     icon: <Activity className="h-10 w-10 text-softery-600" />,
     title: "Diagnóstico digital",
     description: "Avaliação dos processos para identificar oportunidades.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
     icon: <Brain className="h-10 w-10 text-softery-600" />,
     title: "IA para Nutrição",
     description: "Soluções inteligentes para análise nutricional.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
     icon: <Calendar className="h-10 w-10 text-softery-600" />,
     title: "Gestão integrada",
     description: "CRM, calendário e relatórios em uma plataforma.",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
     icon: <Users className="h-10 w-10 text-softery-600" />,
     title: "Gestão de pacientes",
     description: "Automação do acompanhamento nutricional.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
   {
     icon: <MessageSquare className="h-10 w-10 text-softery-600" />,
@@ -47,7 +47,7 @@ const services = [
     icon: <Zap className="h-10 w-10 text-softery-600" />,
     title: "Automação de processos",
     description: "Workflows inteligentes para sua clínica.",
-    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
   },
 ];
 
@@ -62,43 +62,33 @@ const Services = () => {
           <p className="text-gray-600 text-lg mb-6">
             Soluções para otimizar sua clínica de nutrição e focar no que importa.
           </p>
-          <Button className="bg-softery-600 hover:bg-softery-700">
-            Ver todas as soluções
-          </Button>
         </div>
 
-        <div className="overflow-x-auto pb-6">
-          <div className="flex gap-6 min-w-max">
-            {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-80 border-border hover:shadow-md transition-shadow overflow-hidden">
-                <div className="h-40 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <div className="mb-4">{service.icon}</div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-                <CardFooter>
-                  <Button variant="outline" className="w-full text-softery-600 border-softery-600">
-                    Saiba mais
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {services.map((service, index) => (
+            <Card key={index} className="border-border hover:shadow-md transition-shadow overflow-hidden">
+              <div className="h-40 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                />
+              </div>
+              <CardHeader className="pb-2">
+                <div className="mb-4">{service.icon}</div>
+                <CardTitle className="text-xl">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 text-base">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         <div className="mt-12 text-center">
-          <Button className="bg-tech-600 hover:bg-tech-700 text-white px-8 py-3">
+          <Button className="bg-softery-600 hover:bg-softery-700 text-white px-8 py-3">
             Agendar demonstração gratuita
           </Button>
         </div>
