@@ -5,11 +5,10 @@ import {
   UserCheck, 
   Zap, 
   BarChart,
-  FileText,
-  Users,
-  Settings,
-  Calendar,
-  MessageSquare
+  Smartphone,
+  Brain,
+  Target,
+  Shield
 } from "lucide-react";
 
 const benefits = [
@@ -56,8 +55,8 @@ const Benefits = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="flex justify-center">
             <img 
-              src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-              alt="Nutricionista trabalhando" 
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+              alt="Alimentos saudáveis organizados" 
               className="rounded-lg shadow-xl max-h-96 object-cover"
             />
           </div>
@@ -85,36 +84,36 @@ const Benefits = () => {
               Feito para você, nutricionista
             </h3>
             <p className="text-lg text-center mb-8 text-softery-700">
-              Ecossistema pensado para sua rotina diária
+              Tecnologia pensada para sua rotina profissional
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-softery-500 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <Clock className="h-6 w-6 text-white" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-all hover:scale-105 duration-300">
+                <div className="w-12 h-12 bg-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Smartphone className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-softery-800 font-semibold mb-1">Lembretes</div>
-                <div className="text-sm text-softery-600">automáticos</div>
+                <div className="text-softery-800 font-semibold mb-1">App Mobile</div>
+                <div className="text-sm text-softery-600">para pacientes</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-all hover:scale-105 duration-300">
                 <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <FileText className="h-6 w-6 text-white" />
+                  <Brain className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-softery-800 font-semibold mb-1">Formulários</div>
-                <div className="text-sm text-softery-600">pré-consulta</div>
+                <div className="text-softery-800 font-semibold mb-1">IA Integrada</div>
+                <div className="text-sm text-softery-600">sugestões inteligentes</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <Users className="h-6 w-6 text-white" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-all hover:scale-105 duration-300">
+                <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Target className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-softery-800 font-semibold mb-1">Acompanhamento</div>
-                <div className="text-sm text-softery-600">recorrente</div>
+                <div className="text-softery-800 font-semibold mb-1">Metas</div>
+                <div className="text-sm text-softery-600">acompanhamento</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-shadow">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-softery-100 text-center hover:shadow-md transition-all hover:scale-105 duration-300">
                 <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <Settings className="h-6 w-6 text-white" />
+                  <Shield className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-softery-800 font-semibold mb-1">Gestão</div>
-                <div className="text-sm text-softery-600">centralizada</div>
+                <div className="text-softery-800 font-semibold mb-1">Segurança</div>
+                <div className="text-sm text-softery-600">dados protegidos</div>
               </div>
             </div>
           </div>

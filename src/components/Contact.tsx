@@ -46,15 +46,15 @@ const Contact = () => {
 
   const benefits = [
     {
-      icon: <CheckCircle className="h-6 w-6 text-emerald-500" />,
+      icon: <CheckCircle className="h-5 w-5 text-emerald-600" />,
       text: "Análise completa dos seus processos atuais"
     },
     {
-      icon: <Clock className="h-6 w-6 text-blue-500" />,
+      icon: <Clock className="h-5 w-5 text-blue-600" />,
       text: "Roadmap personalizado de implementação"
     },
     {
-      icon: <Award className="h-6 w-6 text-amber-500" />,
+      icon: <Award className="h-5 w-5 text-amber-600" />,
       text: "Proposta comercial sem compromisso"
     }
   ];
@@ -75,13 +75,10 @@ const Contact = () => {
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
             <div className="p-8 lg:p-12">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center bg-softery-100 text-softery-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <div className="inline-flex items-center bg-softery-100 text-softery-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Clock className="w-4 h-4 mr-2" />
                   Análise personalizada em 24h
                 </div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                  Transforme sua clínica hoje mesmo
-                </h3>
                 
                 <div className="grid md:grid-cols-3 gap-4 mb-8">
                   {benefits.map((benefit, index) => (
@@ -98,8 +95,8 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                      <User className="w-4 h-4 mr-2 text-softery-600" />
+                    <label htmlFor="name" className="flex items-center text-sm font-semibold text-gray-800 mb-2">
+                      <User className="w-4 h-4 mr-2 text-gray-700" />
                       Nome completo *
                     </label>
                     <Input
@@ -110,12 +107,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12"
+                      className="border-2 border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12 text-gray-900"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                      <Mail className="w-4 h-4 mr-2 text-softery-600" />
+                    <label htmlFor="email" className="flex items-center text-sm font-semibold text-gray-800 mb-2">
+                      <Mail className="w-4 h-4 mr-2 text-gray-700" />
                       Email profissional *
                     </label>
                     <Input
@@ -126,15 +123,15 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12"
+                      className="border-2 border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12 text-gray-900"
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                      <Phone className="w-4 h-4 mr-2 text-softery-600" />
+                    <label htmlFor="phone" className="flex items-center text-sm font-semibold text-gray-800 mb-2">
+                      <Phone className="w-4 h-4 mr-2 text-gray-700" />
                       WhatsApp *
                     </label>
                     <Input
@@ -145,12 +142,12 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12"
+                      className="border-2 border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12 text-gray-900"
                     />
                   </div>
                   <div>
-                    <label htmlFor="clinic" className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                      <Building className="w-4 h-4 mr-2 text-softery-600" />
+                    <label htmlFor="clinic" className="flex items-center text-sm font-semibold text-gray-800 mb-2">
+                      <Building className="w-4 h-4 mr-2 text-gray-700" />
                       Nome da clínica
                     </label>
                     <Input
@@ -160,14 +157,14 @@ const Contact = () => {
                       placeholder="Nome da sua clínica"
                       value={formData.clinic}
                       onChange={handleChange}
-                      className="border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12"
+                      className="border-2 border-gray-200 focus:border-softery-500 focus:ring-softery-500 h-12 text-gray-900"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="patients" className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                    <Users className="w-4 h-4 mr-2 text-softery-600" />
+                  <label htmlFor="patients" className="flex items-center text-sm font-semibold text-gray-800 mb-2">
+                    <Users className="w-4 h-4 mr-2 text-gray-700" />
                     Quantos pacientes você atende por mês?
                   </label>
                   <select
@@ -175,7 +172,7 @@ const Contact = () => {
                     name="patients"
                     value={formData.patients}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-softery-500 focus:ring-softery-500 h-12"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-softery-500 focus:ring-softery-500 h-12 text-gray-900"
                   >
                     <option value="">Selecione uma opção</option>
                     <option value="1-20">1-20 pacientes</option>
@@ -186,8 +183,8 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="challenges" className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                    <CheckCircle className="w-4 h-4 mr-2 text-softery-600" />
+                  <label htmlFor="challenges" className="flex items-center text-sm font-semibold text-gray-800 mb-2">
+                    <CheckCircle className="w-4 h-4 mr-2 text-gray-700" />
                     Principais desafios da sua clínica
                   </label>
                   <Textarea
@@ -197,7 +194,7 @@ const Contact = () => {
                     value={formData.challenges}
                     onChange={handleChange}
                     rows={4}
-                    className="border-gray-200 focus:border-softery-500 focus:ring-softery-500"
+                    className="border-2 border-gray-200 focus:border-softery-500 focus:ring-softery-500 text-gray-900"
                   />
                 </div>
                 
