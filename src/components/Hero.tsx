@@ -31,14 +31,14 @@ const Hero = () => {
           </div>
           <div className="relative hidden md:block">
             <div className="absolute -top-10 -left-10 w-72 h-72 bg-softery-400/20 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-tech-400/20 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-fit h-72 bg-tech-400/20 rounded-full blur-3xl"></div>
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
                 alt="Alimentos saudáveis e nutritivos" 
                 className="rounded-lg shadow-xl mb-4"
               />
-              <div className="bg-white p-6 rounded-xl shadow-lg border absolute -bottom-10 -right-10">
+              <div className="hidden xl:block bg-white p-6 rounded-xl shadow-lg border absolute -bottom-10 -right-10">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="bg-softery-100 text-softery-600 h-10 w-10 flex items-center justify-center rounded-full">
                     🥗
